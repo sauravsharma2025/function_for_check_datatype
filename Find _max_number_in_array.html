@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function max(arrays){
+
+var current=arrays[0];
+if(arrays.length>0){
+for(let i=1;i<=arrays.length;i++){
+    if(current<arrays[i]){
+         current=arrays[i];
+    }
+}
+console.log(current);
+  }
+else return console.log('Empty Array');
+}
+max([10,12,5,63,7,9])
+max([])
+
+</script>
