@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //types of scope in javascript
+    //block scope
+    //function scope
+    //Global scope
+// (1)Global scope example is following
+var x=10;
+let y=30;
+ console.log('SK@',x);
+ console.log('SK@',y); 
+//here x=10 is in global scope and y is in script scope
+
+//(2)Block  scope
+{
+    var z=102;//this is available in global scope
+    let a=352;//limited to this block only
+    console.log('SK@',z);
+    console.log('SK@',a);//Accessible
+ 
+}
+// console.log('SK@',a);//Reference Error:Not defined
+console.log('SK@',z);//can be access
+
+
+//(3) Function Scope
+function sample(){
+    let p=10;
+    var s=512;
+    name='ram'//accidental variable
+    console.log('SK@',p);
+}
+// console.log('SK@',p);//Reference Error:Not defined
+// console.log('SK@',s);//Reference Error:Not defined because it is defined in function scope
+console.log('SK@',name);
+console.log('SK@',window.x);//define var globally belong to window object
+console.log('SK@48',window.y);
+sample();
+</script>
