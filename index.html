@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+     function xyz(){
+    return console.log('SK@');
+   }
+    function testDataType(input){
+        if(Array.isArray(input))return "Array";
+        if(input==undefined ||null)return "Undefined and Null is not Accepted"
+
+        return typeof(input)
+    }
+   console.log('SK@', testDataType(10));
+   console.log('SK@', testDataType('sa'));
+   console.log('SK@', testDataType([1,2,3]));
+   console.log('SK@', testDataType(true));
+   console.log('SK@', testDataType(xyz));
+   console.log('SK@', testDataType(undefined));
+  
+</script>
