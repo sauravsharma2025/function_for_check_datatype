@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find vowels and its count in a given string</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+// Algorithm:findVowel()
+// Step(1):define all the vowel with zero;
+// Step(2):run a loop upto the string length with simple campare each charater of given
+//   string with (a,e,i,o,u) and if found increase the counter respectively
+// Step(3):just print all the counter which are greater than zero.  
+
+    function findVowel(str){
+       let a=0;
+       let e=0;
+       var i=0;
+       var o=0;
+       var u=0;
+       for(let j=0;j<str.length;j++){
+       if(str[j]=='a')a=a+1;
+       if(str[j]=='e')e=e+1;
+        if(str[j]=='i')i=i+1;
+        if(str[j]=='o')o=o+1;
+        if(str[j]=='u')u=u+1;
+
+       }
+      if(a>0)console.log('a is ',a);
+      if(e>0)console.log('e is ',e);
+      if(i>0)console.log('i is ',i);
+      if(o>0)console.log('o is ',o);
+      if(u>0)console.log('u is ',u);
+    return `Total vowel available in string is:=> ${a+e+i+o+u}`;
+    }
+    console.log(findVowel('saurav'));
+
+
+
+
+    // Method (2)
+    function findVowel2(str){
+        let a=0;
+       let e=0;
+       var i=0;
+       var o=0;
+       var u=0;
+       for(let k=0;k<str.length;k++){
+        switch(str[k]){
+            case 'a':
+                a+=1;   
+                break; 
+            case 'e':
+                e+=1;
+                break;
+            case 'i':
+                i+=1;
+                break;
+            case 'o':
+                o+=1;
+                break;
+            case 'u':
+                u+=1;   
+                break; 
+        }
+    }
+    if(a>0)console.log('a is ',a);
+      if(e>0)console.log('e is ',e);
+      if(i>0)console.log('i is ',i);
+      if(o>0)console.log('o is ',o);
+      if(u>0)console.log('u is ',u);
+    }
+    findVowel2('saurav')
+</script>
