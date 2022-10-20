@@ -80,7 +80,18 @@
 
 
     //Method 3
-    function findVowe3(str){
+  
+ 
+// for(let i=0;i<str.length;i++){
+//     if(str[i] in obj) obj[str[i]]=obj[str[i]]+1;
+// }
+// const arrat=Object.entries(obj);
+// const filter=arrat.filter(([key,value])=>value>0);
+// const backObj=Object.fromEntries(filter)
+// return backObj
+//     }
+//  console.log('SK@',findVowe3('sauravi'));
+function findVowe3(str){
     var obj={
         a:0,
         e:0,
@@ -88,15 +99,19 @@
         o:0,
         u:0
     }
- 
 for(let i=0;i<str.length;i++){
-    if(str[i] in obj) obj[str[i]]=obj[str[i]]+1;
-}
-const arrat=Object.entries(obj);
-const filter=arrat.filter(([key,value])=>value>0);
-const backObj=Object.fromEntries(filter)
-return backObj
+    if(str[i] in obj){
+        obj[str[i]]+=1
+        
     }
- console.log('SK@',findVowe3('sauravi'));
-
+   
+}
+for(key in obj){
+    if(obj[key]===0){
+        delete obj[key];
+    }
+}
+return obj
+    }
+    console.log(findVowe3('vinbituo'));
 </script>
