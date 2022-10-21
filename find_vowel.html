@@ -17,65 +17,65 @@
 //   string with (a,e,i,o,u) and if found increase the counter respectively
 // Step(3):just print all the counter which are greater than zero.  
 
-    function findVowel(str){
-       let a=0;
-       let e=0;
-       var i=0;
-       var o=0;
-       var u=0;
-       for(let j=0;j<str.length;j++){
-       if(str[j]=='a')a=a+1;
-       if(str[j]=='e')e=e+1;
-        if(str[j]=='i')i=i+1;
-        if(str[j]=='o')o=o+1;
-        if(str[j]=='u')u=u+1;
+    // function findVowel(str){
+    //    let a=0;
+    //    let e=0;
+    //    var i=0;
+    //    var o=0;
+    //    var u=0;
+    //    for(let j=0;j<str.length;j++){
+    //    if(str[j]=='a')a=a+1;
+    //    if(str[j]=='e')e=e+1;
+    //     if(str[j]=='i')i=i+1;
+    //     if(str[j]=='o')o=o+1;
+    //     if(str[j]=='u')u=u+1;
 
-       }
-      if(a>0)console.log('a is ',a);
-      if(e>0)console.log('e is ',e);
-      if(i>0)console.log('i is ',i);
-      if(o>0)console.log('o is ',o);
-      if(u>0)console.log('u is ',u);
-    return `Total vowel available in string is:=> ${a+e+i+o+u}`;
-    }
-    console.log(findVowel('saurav'));
-
-
+    //    }
+    //   if(a>0)console.log('a is ',a);
+    //   if(e>0)console.log('e is ',e);
+    //   if(i>0)console.log('i is ',i);
+    //   if(o>0)console.log('o is ',o);
+    //   if(u>0)console.log('u is ',u);
+    // return `Total vowel available in string is:=> ${a+e+i+o+u}`;
+    // }
+    // console.log(findVowel('saurav'));
 
 
-    // Method (2)
-    function findVowel2(str){
-        let a=0;
-       let e=0;
-       var i=0;
-       var o=0;
-       var u=0;
-       for(let k=0;k<str.length;k++){
-        switch(str[k]){
-            case 'a':
-                a+=1;   
-                break; 
-            case 'e':
-                e+=1;
-                break;
-            case 'i':
-                i+=1;
-                break;
-            case 'o':
-                o+=1;
-                break;
-            case 'u':
-                u+=1;   
-                break; 
-        }
-    }
-    if(a>0)console.log('a is ',a);
-      if(e>0)console.log('e is ',e);
-      if(i>0)console.log('i is ',i);
-      if(o>0)console.log('o is ',o);
-      if(u>0)console.log('u is ',u);
-    }
-    findVowel2('saurav')
+
+
+    // // Method (2)
+    // function findVowel2(str){
+    //     let a=0;
+    //    let e=0;
+    //    var i=0;
+    //    var o=0;
+    //    var u=0;
+    //    for(let k=0;k<str.length;k++){
+    //     switch(str[k]){
+    //         case 'a':
+    //             a+=1;   
+    //             break; 
+    //         case 'e':
+    //             e+=1;
+    //             break;
+    //         case 'i':
+    //             i+=1;
+    //             break;
+    //         case 'o':
+    //             o+=1;
+    //             break;
+    //         case 'u':
+    //             u+=1;   
+    //             break; 
+    //     }
+    // }
+    // if(a>0)console.log('a is ',a);
+    //   if(e>0)console.log('e is ',e);
+    //   if(i>0)console.log('i is ',i);
+    //   if(o>0)console.log('o is ',o);
+    //   if(u>0)console.log('u is ',u);
+    // }
+    // findVowel2('saurav')
 
 
 
@@ -91,27 +91,57 @@
 // return backObj
 //     }
 //  console.log('SK@',findVowe3('sauravi'));
-function findVowe3(str){
-    var obj={
-        a:0,
-        e:0,
-        i:0,
-        o:0,
-        u:0
-    }
-for(let i=0;i<str.length;i++){
-    if(str[i] in obj){
-        obj[str[i]]+=1
+// function findVowe3(str){
+//     var obj={
+//         a:0,
+//         e:0,
+//         i:0,
+//         o:0,
+//         u:0
+//     }
+// for(let i=0;i<str.length;i++){
+//     if(str[i] in obj){
+//         obj[str[i]]+=1
         
-    }
+//     }
    
-}
-for(key in obj){
-    if(obj[key]===0){
-        delete obj[key];
+// }
+// for(key in obj){
+//     if(obj[key]===0){
+//         delete obj[key];
+//     }
+// }
+// return obj
+//     }
+//     console.log(findVowe3('vinbituo'));
+
+function myvowel(str){
+    let a=0;
+    let e=0;
+    let i=0;
+    let o=0;
+    let u=0;
+    for(let j=0;j<str.length;j++){
+        if(str[j]=='a'){
+            a+=1
+        }
+        if(str[j]=='e'){
+            e+=1
+        }
+        if(str[j]=='i'){
+            i+=1
+        }
+        if(str[j]=='o'){
+            o+=1
+        }
+        if(str[j]=='u'){
+            u+=1
+        }
     }
+    return console.log(`no of a${a} and no of E${e} and no of I ${i} and no of O ${o} and no of U${u}  And Total is ${a+e+i+o+u}`);;
 }
-return obj
-    }
-    console.log(findVowe3('vinbituo'));
+
+console.log(myvowel('saurav'));
+
+
 </script>
