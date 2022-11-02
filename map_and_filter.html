@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // Step1: iterate over the array with map function
+    // step 2: put condition in map for flitering[];
+    // Step3: condition will check  whether number%2===0 if yes multiply by 2 otherwise print as it is.
+// let arr=[2,4,5,2,7,2];
+// const newArr = arr.map(myFunction)
+//  function myFunction(num){
+//      if(num%2==0){num*2
+//     return num;
+//     }
+//     return num;
+//  }
+//  console.log('SK@',newArr);
+
+let arr=[10,2,3,4,5,6,6,33,1,5,5,5,66];
+const newArr=arr.filter((item)=>{
+    return (item %3 ==0 && item %5==0)
+})
+console.log('SK@',newArr);
+let obj={name:"saurav",
+myfun:function xyz(){
+    return true;
+}
+}
+for(myfun in obj){
+    console.log(obj.myfun())
+}
+console.log(obj.hasOwnProperty(myfun));
+
+</script>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let employees = [
+    {
+        "id": 11,
+        "name":"Abhinav",
+        "salary":75000
+    },
+    {
+        "id": 2131,
+        "name":"Raj",
+        "salary":62000
+    },
+    {
+        "id": 3012,
+        "name":"Raj",
+        "salary":32000
+    }]
+    var filtered_data=[]
+    // function higherSalary(){
+    //     for (var key in employees)
+    //     console.log('SK@',key);
+    //    if(employees[key].salary>60000) filtered_data.push[employees[key]];
+    // return filtered_data;
+    // }     
+  
+
+
+    // function higherSalary(){
+    //     for (let key in employees){
+    //     if(employees[key].salary>60000){
+    //         filtered_data.push(employees[key]) ;
+    //     }
+    // }
+    // return filtered_data;
+    // }
+    //      console.log('SK@',higherSalary());
+
+
+   
+        const result =employees.filter((item)=>item.salary>60000)
+        
+    console.log('SK@',result);
+</script>

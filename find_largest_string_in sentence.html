@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html><script>
+    //First approach
+    // Step 1: using match function we will create a array of String
+    // Step2: create a string variable that is initiallly zero
+    // Step3:loop over the array and if array element length is greater simply overwrite it by larger value
+    function largestWord(str){
+        str=str.match(/[a-zA-Z]+/gi);
+       
+        let largestWord="";
+        for(let i=0;i<str.length;i++){
+            if(str[i].length>largestWord.length){
+                largestWord=str[i];
+            }
+        }
+        return largestWord;
+    }
+    console.log('SK@',largestWord("hello i am morenawasi"));
+
+    //Second Approach
+    function largestWord1(str){
+        str=str.split(" ");
+        let largestWord="";
+        for(let i=0;i<str.length;i++){
+            if(str[i].length>largestWord.length)largestWord=str[i];
+        }
+        return largestWord
+    }
+    console.log('SK@',largestWord1('i am saurav the boss of myttttself'));
+
+    //Third Approach using Sort
+    function largestWord2(str){
+        str=str.split(" ");
+        return str.sort((a,b)=>b.length-a.length
+    )[0]
+    }
+    console.log('SK@',largestWord2('i am saurav the boss of myttttself'));
+
+    //Forth Method
+    function largestWord3(str){
+        str=str.split(" ");
+        let largetOne=str.reduce((acc,curr,i)=>{
+            if(curr.length>str[acc].length)return i
+            return acc
+        },0)
+return str[largetOne]
+    }
+    console.log('SK@',largestWord3('fg rgd'));
+
+    
+</script>
