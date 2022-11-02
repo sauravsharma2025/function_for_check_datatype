@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+// Step1:take an empty Object.
+// Step2:if string is not valid return false.
+// Step3:iterate over the string on the basis of its length.
+// Step4:initialize object with every unique char as key and 0 as a value and if character is repeating or already exist
+// simply increase it's value by one
+// Step5: Return Object
+function checkOccurence(str){
+let obj={};
+if(!str || typeof str !=='string'){return false}
+for(let i=0;i<str.length;i++)  (!obj.hasOwnProperty(str[i]))? obj[str[i]]=1:obj[str[i]]+=1
+
+return obj
+}
+console.log('SK@',checkOccurence(545646));
+</script>
