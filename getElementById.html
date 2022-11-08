@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="a"></div>
+</body>
+</html>
+<script>
+    var result=''
+    function getElementByClassName(className)
+    
+{
+  function getChildren(node){
+    Object.keys(node.children).forEach((child)=>{
+      let childNode = node.children[child];
+      let attr = childNode.getAttribute('id');
+      if (attr == className){
+        result=childNode;
+      }
+      getChildren(childNode);
+    });
+    return result;
+  };
+  const nodes = document.body;
+  getChildren(nodes);
+}
+
+console.log(getElementByClassName('a'));
+console.log(result);
+</script>
