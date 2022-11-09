@@ -7,29 +7,44 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="a"></div>
+    <div>
+      <div id="al">    <div id="a"></div></div>
+
+    <div id="a3"></div>
+
+    </div>
+    
 </body>
 </html>
 <script>
     var result=''
-    function getElementByClassName(className)
-    
+    function getElementById(id)
 {
   function getChildren(node){
-    Object.keys(node.children).forEach((child)=>{
-      let childNode = node.children[child];
-      let attr = childNode.getAttribute('id');
-      if (attr == className){
-        result=childNode;
-      }
-      getChildren(childNode);
-    });
+    
+    for(let i=1;i<=Object.keys(node.children).length;i++){
+      Object.keys(node.children).forEach((child)=>{
+        let childNode = node.children[child];
+   
+   let attr = childNode.getAttribute('id');
+   
+   if (attr == id){
+    return result=childNode;
+   }
+
+   getChildren(childNode);
+
+      })
+     
+      
     return result;
   };
-  const nodes = document.body;
-  getChildren(nodes);
+}
+ 
+  getChildren(document.body);
 }
 
-console.log(getElementByClassName('a'));
-console.log(result);
+console.log(getElementById('a'));
+console.log("42",result);
+// console.log('SK@222',Object.keys(document.body.children));
 </script>
