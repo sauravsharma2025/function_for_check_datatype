@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+   
+    //     for(let i=0;i<num1.length;i++){
+    //         var first+=(num1[i].charCodeAt()-48);
+    //         var second=(num2[i].charCodeAt()-48);
+
+    //     }
+    //     let third=first+second;
+    // console.log('SK@',third);
+    //  let newNum1=num1.split('')
+    //  let newNum2=num2.split('')
+    //  let newNum3 =newNum1.join('');
+    //  let newNum4 =newNum2.join('');
+    //  for(let i=0;i<2;i++){
+    //    var mynum=(newNum3.charCodeAt(i)-48)+(newNum4.charCodeAt(i)-48);
+    
+    //     console.log('SK@30',mynum);
+    //  }
+    //  console.log('SK@',mynum);
+    //  console.log('SK@',newNum3.charCodeAt(1));
+    
+    // let final= newNum3+newNum4;
+    // return String(final);
+
+
+    var addStrings = function(num1, num2) {
+    
+        let carry=0;
+    let indexOne=num1.length-1;
+    let indexTwo=num2.length-1;
+    
+    let res = '';
+
+    while(indexOne>=0 ||indexTwo>=0){
+       let sum=0;
+       let d1 =indexOne>=0 ?Number(num1[indexOne--]):0
+        let d2=(indexTwo>=0)?Number(num2[indexTwo--]):0;
+    
+         sum+=d1+d2+carry;
+          
+    if(sum>9){
+        sum%=10;
+        carry=1;
+    }
+    res=sum+res;
+    }
+if(carry>0){
+    res=carry+res;
+}
+return res;
+};
+
+console.log(addStrings('155','10'));
+</script>
