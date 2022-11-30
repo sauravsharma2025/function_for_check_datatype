@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // "use strict"
+    function tryme(){
+        console.log('SK@',this);
+    }
+    let profile={
+        name:'saurav',
+        address:'Ratlam'
+    }
+    const trymeV2=()=>{
+        console.log('trymev2',this);//window
+    }
+    const newMethod=tryme.bind(profile)
+    newMethod();
+    tryme()
+    trymeV2()
+
+    //ReplaceAll
+    let str='i am saurav sharma and i am very good person';
+    let newStr=str.replaceAll('i','we');
+    console.log('SK@',newStr);
+    //function chaining
+     let arr=[1,2,3,4,5,6,7];
+    const newArr=arr.filter((item)=>item%2===0).map((item)=>item*2)
+    console.log('SK@37',newArr);
+
+</script>

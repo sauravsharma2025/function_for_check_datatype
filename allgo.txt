@@ -1,0 +1,67 @@
+Step1:Iterate a loop over the string and grab single char in variable
+Step2:compare that variable to upcoming char and maintain  a counter till different char is found
+Step3:break the loop once different char found  and simply put counter  and char in Another string
+Step4:Do this utill the last
+
+// Step1:Store first value of Array in variable
+// Step2: Add first value with all remaining values if addition is zero return it.
+// Step3:Else, check next value add that value with remaining element and incase addition is zero return i in object
+
+Step1:create empty object
+Step2:do iteration over the array and stroe its value in object with a condition
+Step3:if we found negative number we will check is it already there then simply break  the loop.
+
+Step:1 Create a empty array.
+Step:2 Insert element in Array check whether given element is already available?
+Step:3 If it is available move it to top else just add new element at last.
+Step:4 insertion should be upto 4 element.
+Step:5 Once 4 element is there if coming element is not present in array we need to shift the array and
+add coming element in array at last
+
+Step1:Start a loop that will run upto 100.
+Step2:if number is multiply of 3&5 print fizzbuzz.
+if number is multiply of 5 print buzz and if multiply of 3  print fizz.
+Step3:rest of the number print as it is.
+
+find sum  of two element is zero
+ Step1:Store first value of Array in variable
+ Step2: Add first value with all remaining values if addition is zero return it.
+ Step3:Else, check next value add that value with remaining element and incase addition
+
+Algo#2
+Step1: Create an empty object.
+Step2:Iterate a loop over the array and check if it is available
+in object skip it otherwise add in object.
+Step3:Now Reverse the number to opposite sign and check if
+it is available then simply return number
+
+[1,2,[3,4],5,[6,7,8,9],6]
+Algo#1
+Step1 : Iterate a loop over the array upto its length.
+Step2 : Checking type of every element if it is other than Array simply push it in new Array.
+Step3 : If it is Array again Iterate(call recursively) and push all the element to new Array.
+Step4 : At last you will get flat Array.  
+
+Step1 :store every word of string in object.
+Step2 :apply hasown property on obect with word.
+Step3:if found return true  other not found
+
+/* adding as many argument as you want.
+
+Step1 : In order to capture argument we can simply use rest operator.
+Step2 : Check whether array is empty or not if empty, return false.
+  
+Step3 : We iterate a loop on stored array while check type of every element if not number return false otherwise do a addition.
+Step4 : return addition.
+
+Find palindrom of a string
+Step1:Iterate a loop over the string from back and store in a variable.
+Step2:variable will have palindrom of given string.
+
+Step1:Split the string into an array on spac basis.
+Step2: 
+#triplet in  the array
+Step1: Create a function accept two parameter one is array and other is sum.
+Step2: pick two  largest number from the array.
+Step3:Iterate over the array and add with rest of the element, if found return numbers.
+Step4: otherwise left second largest number and choose Another number which is largest among them.

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // [12, 3, 4, 1, 6, 9];
+    let arr=[12,12,1,1, 3, 4, 1, 6, 9];
+    let sum=24;
+    function findTriplet(arr,sum){
+        for(let i=0;i<arr.length;i++){
+            for(let j=i+1;j<arr.length;j++){
+                for(let k=j+1;k<arr.length;k++){
+                    if(arr[i]+arr[j]+arr[k]===24){return `${arr[i]},${arr[j]},${arr[k]}`;}
+                    else{return false}
+                }
+            }
+        }
+        
+    }
+    console.log('SK@',findTriplet(arr,24));
+</script>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <style>
+        *{
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+        .nav-list{
+            display: flex;
+            list-style-type: none;
+            gap: 20px;
+            color: #4e4039;
+            align-items: center;
+        }
+        .header-container{
+            display: flex;
+            gap: 10px;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .cohert-apply{
+            border-radius: 30px;
+    border: 1px solid #eb5d1e;
+    background-color: #eb5d1e;
+    color: #fff;
+    padding: 6px 16px;
+}
+.small-screen,.line{
+    display: none;
+    width: 30px;
+    height: 5px;
+   
+    margin: 5px;
+    border-radius: 3px;
+
+}
+.mob-nav-list{
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    list-style-type: none;
+    gap: 38px;
+    background-color: antiquewhite;
+    border: 1px solid antiquewhite;
+    border-radius: 25px;
+    width: 240px;
+    align-items: center;
+}
+@media (min-width:300px) and (max-width:1060px) {
+ .small-screen,.line{
+    display: block;
+}
+.nav-list{
+    display: none;
+}
+
+.header-container{
+    align-items: baseline;
+} 
+}
+        
+    </style>
+</head>
+<body>
+   <div class="header-container">
+    <div class="left-head">
+        <img src="https://vidhyaskillschool.com/assets/img/logo_v2.webp" width="80" alt="">
+    </div>
+    <div class="right-head">
+        <ul class="nav-list">
+            <li style="color:#eb5d1e;">Home</li>
+            <li>Curriculum</li>
+            <li>Faq</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+            <li>Blogs</li>
+            <li class="cohert-apply">Cohert 9 |Tap to apply</li>
+            <li class="cohert-apply">Hire From us</li>
+        </ul>
+         </div>
+        <div class="mobile-nav">
+            <ul class="mob-nav-list">
+                <li style="color:#eb5d1e;">Home</li>
+                <li>Curriculum</li>
+                <li>Faq</li>
+                <li>About Us</li>
+                <li>Contact Us</li>
+                <li>Blogs</li>
+                <li class="cohert-apply">Cohert 9 |Tap to apply</li>
+                <li class="cohert-apply">Hire From us</li>
+            </ul>
+      
+    </div>
+    <span class="material-icons small-screen">
+        format_align_justify
+        </span>
+    <!-- <div class="small-screen">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div> -->
+   </div> 
+</body>
+</html>
+<script>
+let small_screen=document.getElementsByClassName('small-screen')[0];
+small_screen.addEventListener('click',()=>{
+    if(small_screen.innerText=='format_align_justify'){
+        small_screen.innerHTML='clear';
+        document.getElementsByClassName('mob-nav-list')[0].style.display='flex';
+    }else{
+        small_screen.innerText='format_align_justify'
+        document.getElementsByClassName('mob-nav-list')[0].style.display='none';
+    }
+})
+x
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let obj={
+        name:"saurav",
+        address:"Gwalior",
+        company:"vss",
+        bio:{hobby:'sports',food:'veg'}
+        
+    }
+    let obj1={
+        name:"saurav",
+        address:"Gwalior",
+        company:"vss",
+        brrio:{hobby:'sports',food:'veg'}
+    }
+    let flag=55;
+    function compareObj(obj,obj1){
+    for(let i=0;i<Object.keys(obj).length;i++){
+        if(!obj1.hasOwnProperty(Object.keys(obj)[i])&& (!obj.hasOwnProperty(Object.keys(obj1)[i]))){
+            console.log('SK@30',Object.keys(obj1)[i],Object.keys(obj)[i]);
+               flag=6;
+}
+         else if(typeof obj[Object.keys(obj)[i]]==='object' && typeof obj1[Object.keys(obj1)[i]]==='object') {
+                console.log('SK@33', typeof obj[Object.keys(obj)[i]]);
+            compareObj(obj[Object.keys(obj)[i]],obj1[Object.keys(obj1)[i]]);
+         
+        }
+        
+       
+    }
+    if(flag==6){return false}
+    else{return true};
+   
+}
+console.log('g',compareObj(obj,obj1));
+</script>

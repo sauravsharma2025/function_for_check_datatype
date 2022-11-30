@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!--
+       N = 7
+Arr[] = {4, 3, 7, 8, 6, 2, 1}
+#Algorithm
+    Step1:Iterate a loop over the array.
+    Step2:Store the first index value and compare it with next element
+    Step3:if initail element is greater than next element than check whether next_after element
+    is greater than next if so we need to swipe the number else skip it.
+    Step4:if initial element is smaller or equal than check next element is smaller than
+    next_after if is true we need to swipe otherwise continue.
+    
+ -->
+
+</body>
+</html>
+<script>
+    let temp=0;
+    let arr=[5, 2, 3, 1] ;
+    let i=1;
+    while(i<arr.length){
+       if(arr[i]>arr[i-1]){
+        arr[i],arr[i-1]=arr[i-1],arr[i];
+       }
+       if(arr[i]<arr[i+1]){
+        arr[i],arr[i+1]=arr[i-1],arr[i]
+       }
+       i+=2;
+    }
+    console.log('SK@',arr);
+
+    function firstRepChar(s) {
+        let i=0;
+   while(i<s.length-1){
+    let temp=s[i];
+    if(s[i]===s[i+1])return s[i]
+    else{
+        for(let j=i+1;j<s.length;j++){
+            if(s[i]===s[j])return "true"
+        }
+    }
+    i++;
+
+   }
+   return -1;
+  }
+  console.log(firstRepChar("evjxpnqgmvfjl"))
+</script>

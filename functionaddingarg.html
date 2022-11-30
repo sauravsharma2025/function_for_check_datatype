@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+   
+    let total=0;
+  const myfunction=(...args)=>{
+if(args.length===0){
+    return "empty not allowed";
+}
+    for(let i in args){
+        if(typeof args[i] !== "number"){
+            return "pass valid argument"
+        }
+      total+=args[i];
+    }
+
+    return total
+  }
+    console.log(myfunction());
+
+</script>

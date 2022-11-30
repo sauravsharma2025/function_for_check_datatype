@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+//     function restaurantCustomer() {
+//     return getCustomer()
+//     .then(customer => {
+//         return getOrder(customer);
+//     }).then(order => {
+//         return prepareFood(order);
+//     }).then(meal => {
+//         return serveFood(meal);
+//     }).then(food => {
+//         return eatFood(food, customer);
+//     }).catch(showError);
+// } 
+// async function  restaurantCustomer1(){
+//    try{
+//     const customer=await getCustomer();
+//     const order= await getOrder();
+//     const meal= await prepareFood();
+//     const food= await serveFood();
+//     const eat= await eatFood(food,customer);
+//     return eat;
+//    }catch(err){
+//     return null;
+//    }
+
+//     }
+
+// }
+// function ex4() {
+//     return fetch('https://microsoft.com').then(res).then(res2);
+// }
+// function res(result){
+//     return result.ok;
+// }
+
+// function res2(result){
+//    console.log(result);
+// }
+
+// async function myfunction(){
+//     try{
+// const ex4= await  fetch('https://microsoft.com');
+// const res=await res(ex4);
+
+// return res2(res)
+// }catch(err){
+//     return null;
+// }
+// }
+// myfunction()
+//  const promise = new Promise(res => res(2));
+// promise.then(v => {
+//         console.log(v);
+//         return v * 2;
+//     })
+//     .then(v => {
+//         console.log(v);
+//         return v * 2;
+//     })
+//     .finally(v => {
+//         console.log(v);
+//         return v * 2;
+//     })
+//     .then(v => {
+//        return v;
+//     }); 
+
+const promise = new Promise((resolve, reject) => {
+    reject(Error('Some Error Occurred'));
+  })
+  .catch(error => console.log(error))
+  .then(error => console.log(error));
+</script>

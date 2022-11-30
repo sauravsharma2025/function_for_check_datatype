@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // function checkPalindrome(givenString){
+    //     if(!givenString){
+    //         return false
+    //     }
+    //     let givenString_lower=givenString.toLowerCase();
+    //     let holdReverse='';
+    //     for(let i=givenString.length-1;i>=0;i--){
+    //         holdReverse+=givenString_lower[i];
+    //     }
+    //     if(givenString_lower===holdReverse)return true;
+    //      return false;
+    // }
+    // console.log(checkPalindrome('madlam'));
+
+let mainThing=[];
+
+
+function checksent(){
+    let givenSentence="Hello sir how are you at your level. I am good bob"
+    givenSentenceArr=givenSentence.split(" ");
+    
+for(let j=0;j<givenSentenceArr.length;j++){
+    let temp=givenSentenceArr[j];
+
+    checkPalindrome(temp);
+    function checkPalindrome(temp){
+        if(!temp){
+            return false
+        }
+        let givenString_lower=temp.toLowerCase();
+        let holdReverse='';
+        for(let i=givenString_lower.length-1;i>=0;i--){
+            holdReverse+=givenString_lower[i];
+        }
+        console.log('SK@',holdReverse,givenString_lower);
+        if(givenString_lower===holdReverse)
+        {
+            mainThing.push(givenString_lower)
+            return true};
+         return false;
+    }
+}
+return mainThing;
+}
+    console.log(checksent())
+    </script>
